@@ -1,0 +1,19 @@
+[project]
+
+name = "simple_python_project_template"
+version = "1.0.0"
+description = "A simple python project template using direnv"
+authors = [
+  {name="Upal Bhattacharya", email="u.bhattacharya@uu.nl"},
+]
+readme = "README.md"
+dynamic = ["dependencies", "optional-dependencies"]
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
