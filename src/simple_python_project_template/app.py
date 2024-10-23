@@ -3,7 +3,7 @@
 import argparse
 import os
 
-import torch
+import polars
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--a_arg", type=str)
@@ -11,6 +11,7 @@ parser.add_argument("-b", "--b_arg", type=str)
 
 args = parser.parse_args()
 print(args)
+print(polars)
 
 ls = [
     "hello",
